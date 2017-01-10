@@ -14,6 +14,12 @@
     "author": {
       "type": "string",
       "label": "Author"
+    },
+    "packagename": {
+      "type": "string",
+      "required": true,
+      "label": "packagename",
+      "default": "vueapp"
     }
   },
   "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev"
