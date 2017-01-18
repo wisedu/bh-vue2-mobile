@@ -1,5 +1,5 @@
 import index from './pages/index/index.vue';
-module.exports = {
+export default {
     routes: [
         {
             path: '/',
