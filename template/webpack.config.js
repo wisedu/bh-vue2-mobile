@@ -20,7 +20,11 @@ module.exports = {
         }), require('postcss-pxtorem')({
           rootValue: 20,
           propWhiteList: []
-        })]
+        })],
+        loaders: {
+          scss: 'style-loader!css-loader!sass-loader',
+          sass: 'style-loader!css-loader!sass-loader?indentedSyntax',
+        }
       }
     }, {
       test: /\.js$/,
@@ -46,6 +50,11 @@ module.exports = {
     }]
   },
   resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    modules: [
+      'src',
+      'node_modules'
+    ],
     alias: {
       'vue$': 'vue/dist/vue.common.js'
     }
