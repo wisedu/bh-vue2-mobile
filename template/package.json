@@ -11,6 +11,7 @@
     "deploy": "npm run build && node ./build/deploy.js"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "bh-mobile-sdk": "^0.1.24",
     "mint-ui": "^2.1.0",
     "vue": "^2.1.0",
