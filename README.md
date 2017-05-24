@@ -16,5 +16,5 @@ let prefix = WEBPACK_CONIFG_HOST;
 config.url = prefix + config.url;
 ```
 
-1. 开发环境时:"http://amptest.wisedu.com/xsfwfw/"
-1. 发布环境时:location.origin + location.pathname.substring(0, location.pathname.indexOf("/", 1)) + "/"
+1. 开发环境时 = "http://amptest.wisedu.com/xsfwfw/"
+1. 发布环境时 = location.origin + location.pathname.substring(0, location.pathname.indexOf("/", 1)) + "/"
