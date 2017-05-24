@@ -7,7 +7,7 @@ import route from './router';
 import SDK, {
     init
 } from 'bh-mobile-sdk';
-import 'mint-ui/lib/style.css'
+import 'bh-mint-ui2/lib/style.css'
 Vue.use(Mint);
 Vue.use(VueRouter);
 Vue.use(VueResource);
