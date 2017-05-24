@@ -90,4 +90,13 @@ if (process.env.NODE_ENV === 'production') {
       minimize: true,
     })
   ])
+}else if (process.env.NODE_ENV === 'development') {
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"'
+      },
+      "WEBPACK_CONIFG_HOST":'"http://amptest.wisedu.com/xsfwfw/"'
+    })
+  ])
 }
