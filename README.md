@@ -12,8 +12,18 @@ $ npm run dev
 
 在开发时需要调用接口，其上下文路径请使用 WEBPACK_CONIFG_HOST 环境变量，如：
 ``` js
-let prefix = WEBPACK_CONIFG_HOST;
-config.url = prefix + config.url;
+
+CommonRequest('sys/leaveSchool/MobileAuth/setDefaultRole.do');
+
+function CommonRequest(url, config = {}) {
+  return axios({
+    method: config.method || 'get',
+    url: WEBPACK_CONIFG_HOST + url,
+    params: config.params || null,
+    data: config.data || null,
+    adapter: config.mockFlag ? () => MOCK_DATA[config.mock] : null
+});
+
 ```
 
 1. 开发环境时 = "http://amptest.wisedu.com/xsfwfw/"
