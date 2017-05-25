@@ -81,7 +81,8 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
-      }
+      },
+      "WEBPACK_CONIFG_HOST":'location.origin + location.pathname.substring(0, location.pathname.indexOf("/", 1)) + "/"'
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
@@ -93,13 +94,13 @@ if (process.env.NODE_ENV === 'production') {
       minimize: true,
     })
   ])
-} else if (process.env.NODE_ENV === 'development') {
+}else if (process.env.NODE_ENV === 'development') {
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"development"'
       },
-      "WEBPACK_CONIFG_HOST": '"http://amptest.wisedu.com/xsfwfw/"'
+      "WEBPACK_CONIFG_HOST":'"http://amptest.wisedu.com/xsfwfw/"'
     })
   ])
 }
