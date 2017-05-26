@@ -10,8 +10,7 @@ if exist %packageName% (
 if exist "app_info.xml" (
 	copy "app_info.xml" %packageName%
 ) else (
-	color 0c
-	echo "error: 根目录中缺少app_info.xml！请将app_info.xml放在根目录下后执行打包！"
+	echo "error：There is a missing app_info.xml in the root directory! Please put app_info.xml in the root directory and then execute the package"
 	exit
 )
 
