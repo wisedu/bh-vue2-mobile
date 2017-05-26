@@ -19,6 +19,7 @@ mkdir $packageName
 mkdir ${packageName}/classes
 mkdir ${packageName}/lib
 mkdir ${packageName}/web
+mkdir ${packageName}/config
 cp -R ./dist ${packageName}/web
 cp -R ./static ${packageName}/web
 cp ./index.html ${packageName}/web
