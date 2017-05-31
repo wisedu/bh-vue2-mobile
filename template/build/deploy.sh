@@ -15,7 +15,7 @@ fi
 
 packageName=$1
 mkdir $packageName
-# touch ${packageName}/app_info.xml
+touch ${packageName}/EMAP_APP
 mkdir ${packageName}/classes
 mkdir ${packageName}/lib
 mkdir ${packageName}/web
@@ -25,8 +25,9 @@ cp -R ./static ${packageName}/web
 cp ./index.html ${packageName}/web
 
 
-
-zip -r ${packageName}.zip ${packageName}
+cd $packageName
+zip -r ../${packageName}.zip ./*
+cd ..
 rm -rf ${packageName}
 
 echo '---- deploy complete ----'
