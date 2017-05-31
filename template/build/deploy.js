@@ -7,14 +7,16 @@ let child_process = require('child_process')
 
 let packageName = require('../package.json').packageName;
 if (platform === 'win32') {
-	child_process.execFile(`.\\build\\deploy.bat`, [`${packageName}`], undefined, function (error, stdout, stderr) {
+	child_process.execFile(`.\\build\\deploy.bat`, [`${packageName}`], undefined, function(error, stdout, stderr) {
 		console.log(error)
 		console.log(stdout)
 		console.log(stderr)
 	})
 } else {
+	console.log('linux start')
 	exec('chmod u+x ./build/deploy.sh')
 	exec(`./build/deploy.sh ${packageName}`)
+	console.log('linux end')
 }
 
 /* 旧版本
