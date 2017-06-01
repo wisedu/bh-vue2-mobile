@@ -1,10 +1,11 @@
+//WEBPACK_CONIFG_HOST的值
 
 export default {
-    weeklist: global.HOST + '/sys/mykbxt/api/getMyTimeTableList.do',
-    daylist: global.HOST + '/sys/mykbxt/api/queryDayAndFutureCourses.do',
-    week: global.HOST + '/sys/mykbxt/api/getSchoolCalendar.do',
-    memberList: global.HOST + '/sys/mykbxt/api/queryCourseMembers.do',
-    geterr: global.HOST + '/sys/mykbxt/api/queryErrorMessages.do',
-    err: global.HOST + '/sys/mykbxt/api/feedBackInfo.do',
-    userInfo: global.HOST + '/sys/itservicecommon/api/queryAppAndUserDatas.do'
+    weeklist: WEBPACK_CONIFG_HOST + '/sys/mykbxt/api/getMyTimeTableList.do',
+    daylist: WEBPACK_CONIFG_HOST + '/sys/mykbxt/api/queryDayAndFutureCourses.do',
+    week: WEBPACK_CONIFG_HOST + '/sys/mykbxt/api/getSchoolCalendar.do',
+    memberList: WEBPACK_CONIFG_HOST + '/sys/mykbxt/api/queryCourseMembers.do',
+    geterr: WEBPACK_CONIFG_HOST + '/sys/mykbxt/api/queryErrorMessages.do',
+    err: WEBPACK_CONIFG_HOST + '/sys/mykbxt/api/feedBackInfo.do',
+    userInfo: WEBPACK_CONIFG_HOST + '/sys/itservicecommon/api/queryAppAndUserDatas.do'
 }
