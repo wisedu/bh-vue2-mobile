@@ -15,7 +15,6 @@
     "bh-mobile-sdk": "^0.1.24",
     "bh-mint-ui2": "^0.0.6",
     "vue": "^2.1.0",
-    "vue-resource": "^0.7.2",
     "vue-router": "^2.1.1"
   },
   "devDependencies": {
