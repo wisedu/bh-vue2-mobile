@@ -23,11 +23,7 @@ module.exports = {
           //   rootValue: 20,
           //   propWhiteList: []
           // })
-        ],
-        loaders: {
-          scss: 'style-loader!css-loader!sass-loader',
-          sass: 'style-loader!css-loader!sass-loader?indentedSyntax',
-        }
+        ]
       }
     }, {
       test: /\.js$/,
