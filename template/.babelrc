@@ -7,7 +7,7 @@
     "stage-0"
   ],
   "plugins": ["transform-runtime", ["component", [{
-    "libraryName": "mint-ui2",
+    "libraryName": "bh-mint-ui2",
     "style": true
   }]]],
   "comments": false,
