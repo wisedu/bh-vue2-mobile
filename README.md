@@ -10,7 +10,7 @@ $ npm run dev
 
 在webpack.config.js中定义了变量：
 
-在开发时需要调用接口，其上下文路径请使用 WEBPACK_CONIFG_HOST 环境变量，如：
+在开发时需要调用接口，其上下文路径请使用 *WEBPACK_CONIFG_HOST* 环境变量，如：
 ``` js
 
 CommonRequest('sys/leaveSchool/MobileAuth/setDefaultRole.do');
