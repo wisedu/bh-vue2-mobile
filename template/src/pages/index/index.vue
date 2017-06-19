@@ -31,6 +31,9 @@
         },
         components: {
             comTest
+        },
+        ready(){
+            global.SDK.setTitleText("首页")
         }
     }
 </script>
