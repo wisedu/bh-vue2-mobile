@@ -4,10 +4,12 @@ import App from './app.vue';
 import Mint from 'bh-mint-ui2';
 import { Toast } from 'bh-mint-ui2';
 import route from './router';
-import init from 'bh-mixin-sdk'
 import * as utils from './utils'
 import api from './api'
 import 'bh-mint-ui2/lib/style.css'
+{{#useNativeSDK}}
+import init from 'bh-mixin-sdk'
+{{/useNativeSDK}}
 
 Vue.use(Mint);
 Vue.use(VueRouter);
@@ -28,7 +30,7 @@ function getSDKConfig() {
          * 
          * uploadImgsToEmapUrl 参数 就是步骤2中 将serverId发送到应用服务的请求接口
          */
-        //TODO: 上传接口
+        // TODO: 上传接口
         uploadImgsToEmapUrl: WEBPACK_CONIFG_HOST + '/sys/yxapp/WechatServiceStu/saveFileFromWechat.do' //TODO: 上传接口
       },
       dd: {}, //钉钉jdk初始化参数
@@ -41,7 +43,7 @@ function getSDKConfig() {
        * timestamp - 生成签名的时间戳
        * signature - 签名
        */
-      //TODO: 发请求获取微信签名
+      // TODO: 发请求获取微信签名
       config.wx.url = "http://res.wisedu.com:9090/checkSign";
       utils.Get(api.getWechatSign, { configurl: window.location.href.replace(/#(\S+)?/, '') }).then(({
         data: resp
