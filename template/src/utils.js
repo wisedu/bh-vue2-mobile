@@ -50,6 +50,7 @@ export const Post = (url, data = null, config = {}) => {
  * @param {*} config - 运行环境是今日校园时，此参数为header参数；运行环境不是今日校园时，此参数为请求配置，详见axios文档 [https://github.com/mzabriskie/axios]；
  */
 export const Get = (url, data = null, config = {}) => {
+//   使用今日校园壳子的ajax，在特定的版本再开启，如公有云跨域版本
 //   if (/wisedu/.test(UA)) {
 //     // 今日校园 原生壳子 get方法
 //     let requestUrl = getApi(url) + serialize(data)
