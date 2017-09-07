@@ -50,25 +50,25 @@ export const Post = (url, data = null, config = {}) => {
  * @param {*} config - 运行环境是今日校园时，此参数为header参数；运行环境不是今日校园时，此参数为请求配置，详见axios文档 [https://github.com/mzabriskie/axios]；
  */
 export const Get = (url, data = null, config = {}) => {
-  if (/wisedu/.test(UA)) {
-    // 今日校园 原生壳子 get方法
-    let requestUrl = getApi(url) + serialize(data)
-    return new Promise((resolve, reject) => {
-      SDK.bh.http.sendGetRequest(requestUrl, (response) => {
-        if (response.code !== 200) {
-          reject(response)
-        }
-        resolve({
-          data: JSON.parse(response.data)
-        })
-      }, config)
-    })
-  } else {
+//   if (/wisedu/.test(UA)) {
+//     // 今日校园 原生壳子 get方法
+//     let requestUrl = getApi(url) + serialize(data)
+//     return new Promise((resolve, reject) => {
+//       SDK.bh.http.sendGetRequest(requestUrl, (response) => {
+//         if (response.code !== 200) {
+//           reject(response)
+//         }
+//         resolve({
+//           data: JSON.parse(response.data)
+//         })
+//       }, config)
+//     })
+//   } else {
     return axios({
       method: 'get',
       url: getApi(url),
       params: data,
       ...config
     })
-  }
+//   }
 }
