@@ -32,7 +32,7 @@
         components: {
             comTest
         },
-        ready(){
+        mounted(){
             global.SDK.setTitleText("首页")
         }
     }
