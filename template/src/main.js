@@ -26,6 +26,36 @@ Vue.use(Mint);
 Vue.use(VueRouter);
 const router = new VueRouter(route);
 
+router.beforeEach((to, from, next) => {
+  // 加载页面smile依赖
+  if (window.smile) {
+      var require = []
+      var promiseArr = []
+      // 拉取require配置中的表单
+      if (to.meta.require && to.meta.require.length > 0) {
+          require = require.concat(to.meta.require)
+      }
+      // 拉取传参中的表单
+      if (to.query.smileForm) {
+          require.push(to.query.smileForm)
+      }
+      require.map(function(item) {
+          if (!window.smile.components[item]) {
+              promiseArr.push(window.smile.loadPage(item))
+          }
+      })
+      if (promiseArr.length > 0) {
+          Promise.all(promiseArr).then(function() {
+              next()
+          })
+      } else {
+          next()
+      }
+  } else {
+      next()
+  }
+})
+
 {{#useNativeSDK}}
 global.SDK = null;
 
