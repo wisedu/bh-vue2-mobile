@@ -6,10 +6,21 @@ import { Toast } from 'bh-mint-ui2';
 import route from './router';
 import * as utils from './utils'
 import api from './api'
+import axios from 'axios'
 import 'bh-mint-ui2/lib/style.css'
 {{#useNativeSDK}}
 import init from 'bh-mixin-sdk'
 {{/useNativeSDK}}
+
+if (window.smile) {
+  window.Vue = Vue
+  window.axios = axios
+  if (WEBPACK_CONIFG_HOST) {
+      window.WEBPACK_CONIFG_HOST = WEBPACK_CONIFG_HOST
+  }
+  // 初始化eventBus
+  window.smile.eventBus = new Vue()
+}
 
 Vue.use(Mint);
 Vue.use(VueRouter);
