@@ -31,15 +31,15 @@ if exist "app_info.xml" (
     rd "%name%" /s /q
     exit
 )
-if exist "permission.xml" (
-    echo "---- permission has ----"
-    copy "permission.xml" "%name%\config"
-    echo "---- permission copyed ----"
-) else (
-    echo "error:there is a missing permission.xml in the root directory! please put permission.xml in the root directory and then execute the package"
-    rd "%name%" /s /q
-    exit
-)
+rem if exist "permission.xml" (
+rem     echo "---- permission has ----"
+rem     copy "permission.xml" "%name%\config"
+rem     echo "---- permission copyed ----"
+rem ) else (
+rem     echo "error:there is a missing permission.xml in the root directory! please put permission.xml in the root directory and then execute the package"
+rem     rd "%name%" /s /q
+rem     exit
+rem )
 echo "---- deploy complete ----"
 echo "---- zip start ----"
 set src="%cd%\%name%\"
