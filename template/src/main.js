@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import App from './app.vue';
+import App from './App.vue';
 import Mint from 'bh-mint-ui2';
 import { Toast } from 'bh-mint-ui2';
 import route from './router';
