@@ -18,9 +18,10 @@
    * @param {String} url - 请求地址
    * @param {Object} data - 请求参数，JSON对象
    */
-  smile.post = function (url, data) {
+  smile.post = function (url, data, config) {
+    config = config || {}
     return new Promise(function(resolve, reject) {
-      axios.post(url, serializeData(data)).then(function(resp) {
+      axios.post(url, serializeData(data), config).then(function(resp) {
         resolve(resp.data)
       }, function(error) {
         reject(error)
@@ -33,13 +34,14 @@
    * @param {String} url - 请求地址
    * @param {Object} data - 请求参数，JSON对象
    */
-  smile.get = function (url, data) {
+  smile.get = function (url, data, config) {
+    config = config || {}
     var data = serializeData(data)
     if (data) {
       url += '?' + data
     }
     return new Promise(function(resolve, reject) {
-      axios.get(url).then(function(resp) {
+      axios.get(url, config).then(function(resp) {
         resolve(resp.data)
       }, function(error) {
         reject(error)
