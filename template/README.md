@@ -47,11 +47,12 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 │       ├── actions.js
 │       └── ···
 ├── static/                             静态资源文件，引用方式：
-│   └── mobile/
-│       ├── css/
-│       │   ├── base.css
-│       │   └── style.css
-│       └── js/
+│   ├── assets/
+│   ├── css/
+│   │   ├── base.css
+│   │   └── style.css
+│   └── js/
+│  
 ├── config.js
 └── index.html
 ```
