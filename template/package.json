@@ -12,7 +12,8 @@
     },
     "dependencies": {
         "babel-runtime": "^6.23.0",
-        "emap-mobile": "^1.1.8"
+        "emap-mobile": "^1.1.8",
+        "bh-mint-ui2": "^1.0.60"
     },
     "devDependencies": {
         "babel-core": "^6.0.0",
