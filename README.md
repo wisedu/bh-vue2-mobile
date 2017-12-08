@@ -8,7 +8,7 @@ $ npm install
 $ npm run dev
 ```
 
-Vue / VueRouter / axios / BH-Mint-UI 2已经通过 script方式引入
+Vue / VueRouter / axios 通过 script方式引入
 
 在webpack.config.js中定义了变量：
 
