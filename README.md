@@ -8,6 +8,8 @@ $ npm install
 $ npm run dev
 ```
 
+Vue / VueRouter / axios / BH-Mint-UI 2已经通过 script方式引入
+
 在webpack.config.js中定义了变量：
 
 在开发时需要调用接口，其上下文路径请使用  WEBPACK_CONIFG_HOST  环境变量，如：
