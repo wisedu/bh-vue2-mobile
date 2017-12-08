@@ -1,19 +1,20 @@
 import App from './App.vue';
+import Mint from 'bh-mint-ui2';
+import { Toast } from 'bh-mint-ui2';
 import route from './router';
 import * as utils from './utils'
 import api from './api'
+import 'bh-mint-ui2/lib/style.css'
 
 let Vue = window.Vue;
 let VueRouter = window.VueRouter;
 let axios = axios;
-let Toast = window.$toast;
-let Indicator = Vue.$indicator;
-let MessageBox = Vue.$messagebox;
 
 if (WEBPACK_CONIFG_HOST) {
     window.WEBPACK_CONIFG_HOST = WEBPACK_CONIFG_HOST
 }
 
+Vue.use(Mint);
 const router = new VueRouter(route);
 
 {{#useNativeSDK}}
