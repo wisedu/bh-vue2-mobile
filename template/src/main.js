@@ -8,7 +8,7 @@ import 'bh-mint-ui2/lib/style.css'
 
 let Vue = window.Vue;
 let VueRouter = window.VueRouter;
-let axios = axios;
+let axios = window.axios;
 
 if (WEBPACK_CONIFG_HOST) {
     window.WEBPACK_CONIFG_HOST = WEBPACK_CONIFG_HOST
