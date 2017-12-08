@@ -7,6 +7,8 @@ let Vue = window.Vue;
 let VueRouter = window.VueRouter;
 let axios = axios;
 let Toast = window.$toast;
+let Indicator = Vue.$indicator;
+let MessageBox = Vue.$messagebox;
 
 if (WEBPACK_CONIFG_HOST) {
     window.WEBPACK_CONIFG_HOST = WEBPACK_CONIFG_HOST
