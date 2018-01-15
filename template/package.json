@@ -13,7 +13,7 @@
     "dependencies": {
         "axios": "^0.16.1",
         "babel-runtime": "^6.23.0",
-        "bh-mixin-sdk": "^0.2.48",
+        "bh-mixin-sdk": "^0.2.49",
         "bh-mint-ui2": "^1.0.72",
         "emap-mobile": "^1.1.10",
         "vue": "^2.5.9",
