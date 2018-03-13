@@ -58,7 +58,6 @@ router.beforeEach((to, from, next) => {
 
 {{#useNativeSDK}}
 global.SDK = null;
-
 function getSDKConfig() {
   return new Promise((resolve, reject) => {
     let config = {
@@ -67,8 +66,7 @@ function getSDKConfig() {
         /**
          * 微信端上传图片的流程是：
          * 1、选取文件通过微信jsdk上传到微信服务器后获取文件的serverId
-         * 2、将serverId发送到应用服务端，服务端接收请求后根据serverId，将文件从微信服务拉取到应用服务
-         * 
+         * 2、将serverId发送到应用服务端，服务端接收请求后根据serverId，将文件从微信服务拉取到应用服务 
          * uploadImgsToEmapUrl 参数 就是步骤2中 将serverId发送到应用服务的请求接口
          */
         // TODO: 上传接口
@@ -86,13 +84,13 @@ function getSDKConfig() {
        */
       // TODO: 发请求获取微信签名
       config.wx.url = "http://res.wisedu.com:9090/checkSign";
-      utils.Get(api.getWechatSign, { configurl: window.location.href.replace(/#(\S+)?/, '') }).then(({
+      utils.Get(api.getWechatSign, { url: window.location.href.replace(/#(\S+)?/, ''),corp:'amptest' }).then(({
         data: resp
       }) => {
         if (resp.code == "0") {
           let signData = resp.data
-          signData.corpId = signData.corpid
-          signData.nonceStr = signData.noncestr
+          signData.corpId = signData.corpId
+          signData.nonceStr = signData.nonceStr
           config.wx.signData = signData
           resolve(config)
         } else {
