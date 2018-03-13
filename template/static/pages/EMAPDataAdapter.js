@@ -7,7 +7,7 @@ var EMAPDataAdapter = function(meta){
 
     return {
         execute: function(action, data){
-            var rootPath = window.WEBPACK_CONIFG_HOST || ''
+            var rootPath = window.WEBPACK_CONFIG_HOST || ''
             return smile.post(rootPath + action.url, data)
         },
         actions: {

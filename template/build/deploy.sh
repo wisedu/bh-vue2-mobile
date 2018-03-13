@@ -20,6 +20,17 @@ mkdir ${packageName}/classes
 mkdir ${packageName}/lib
 mkdir ${packageName}/web
 mkdir ${packageName}/config
+
+#判断根目录下的 permission.xml是否存在，若存在就放入打包中
+if [ -f './permission.xml' ]
+then 
+packageName=$1
+cp ./permission.xml ${packageName}/config
+else 
+echo -e "\033[31m error: 根目录中缺少permission.xml！请将permission.xml放在根目录下后执行打包！ \033[0m"
+exit 127
+fi
+
 cp -R ./dist ${packageName}/web
 cp -R ./static ${packageName}/web
 cp ./index.html ${packageName}/web

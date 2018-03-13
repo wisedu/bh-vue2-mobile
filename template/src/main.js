@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import App from './app.vue';
+import App from './App.vue';
 import Mint from 'bh-mint-ui2';
 import { Toast } from 'bh-mint-ui2';
 import route from './router';
@@ -15,8 +15,8 @@ import init from 'bh-mixin-sdk'
 if (window.smile) {
   window.Vue = Vue
   window.axios = axios
-  if (WEBPACK_CONIFG_HOST) {
-      window.WEBPACK_CONIFG_HOST = WEBPACK_CONIFG_HOST
+  if (WEBPACK_CONFIG_HOST) {
+      window.WEBPACK_CONFIG_HOST = WEBPACK_CONFIG_HOST
   }
   // 初始化eventBus
   window.smile.eventBus = new Vue()
@@ -70,7 +70,7 @@ function getSDKConfig() {
          * uploadImgsToEmapUrl 参数 就是步骤2中 将serverId发送到应用服务的请求接口
          */
         // TODO: 上传接口
-        uploadImgsToEmapUrl: WEBPACK_CONIFG_HOST + '/sys/yxapp/WechatServiceStu/saveFileFromWechat.do' //TODO: 上传接口
+        uploadImgsToEmapUrl: WEBPACK_CONFIG_HOST + '/sys/yxapp/WechatServiceStu/saveFileFromWechat.do' //TODO: 上传接口
       },
       dd: {}, //钉钉jdk初始化参数
     }

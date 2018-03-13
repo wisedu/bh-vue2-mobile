@@ -79,7 +79,7 @@ if (process.env.NODE_ENV === 'production') {
       'process.env': {
         NODE_ENV: '"production"'
       },
-      "WEBPACK_CONIFG_HOST":'location.origin + location.pathname.substring(0, location.pathname.indexOf("/", 1)) + "/"'
+      "WEBPACK_CONFIG_HOST":'location.origin + location.pathname.substring(0, location.pathname.indexOf("/", 1)) + "/"'
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
@@ -97,7 +97,7 @@ if (process.env.NODE_ENV === 'production') {
       'process.env': {
         NODE_ENV: '"development"'
       },
-      "WEBPACK_CONIFG_HOST":'"http://amptest.wisedu.com/xsfwfw/"'
+      "WEBPACK_CONFIG_HOST":'"http://amptest.wisedu.com/xsfwfw/"'
     })
   ])
 }
